@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Planning</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Travel Planning Website</h1>
+    
+    <div>
+      <label for="destination">Enter a Destination:</label>
+      <input type="text" id="destination" placeholder="e.g. Paris">
+      <button onclick="searchDestination()">Search</button>
+    </div>
+    
+    <div id="destination-images"></div>
+
+    <div>
+      <label for="departure">Departure City:</label>
+      <input type="text" id="departure" placeholder="e.g. New York">
+      <button onclick="searchFlights()">Search Flights</button>
+    </div>
+
+    <div id="flights"></div>
+
+    <button onclick="searchLocalPlaces()">Show Local Restaurants & Attractions</button>
+    <div id="local-places"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
