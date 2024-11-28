@@ -5,10 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Planning</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Style for the sticky title bar */
+    .title-bar {
+      position: sticky;
+      top: 0;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    label, input, button {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
+
+  <div class="title-bar">
+    Travel Planning Website
+  </div>
+
   <div class="container">
-    <h1>Travel Planning Website</h1>
+    <h1>Plan Your Next Adventure</h1>
     
     <div>
       <label for="destination">Enter a Destination:</label>
