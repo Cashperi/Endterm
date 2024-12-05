@@ -1,13 +1,13 @@
 const unsplashAPIKey = '-SjwEA3hqmM6skUM_-5-teNcC5-__-Nx3QTCRrq9Ks0';
 const amadeusAPIKey = 'JVtqd5gwZe0oUVMpH9bUM4cmAoZuQgZm';
-const amadeusAPISecret = 'YOURGTUUWZ0WEtwl1nF7';
+const amadeusAPISecret = 'GTUUWZ0WEtwl1nF7';
 const foursquareAPIKey = 'fsq3r1UPyvDky+XzIj7hkbyIwJb8nOAg2SLXWfEjVEZ8fks=';
 
 async function searchDestination() {
   try {
     const destination = document.getElementById('destination').value.trim();
     if (!destination) {
-      alert('Please enter a destination.');
+      alert('Please enter a destination.'); 
       return;
     }
     const response = await fetch(`https://api.unsplash.com/search/photos?query=${destination}&client_id=${unsplashAPIKey}`);
@@ -34,7 +34,7 @@ function displayImages(images) {
 async function searchFlights() {
   try {
     const departureCity = document.getElementById('departure').value.trim();
-    const destinationCity = document.getElementById('destination').value.trim();
+    const destinationCity = document.getElementById('destination-flight').value.trim();
 
     if (!departureCity || !destinationCity) {
       alert('Please enter both departure and destination cities.');
@@ -91,18 +91,22 @@ function displayFlights(flights) {
 
 async function searchLocalPlaces() {
   try {
-    const destination = document.getElementById('destination').value.trim();
-    if (!destination) {
-      alert('Please enter a destination.');
+    const attraction = document.getElementById('local-attraction').value.trim();
+    if (!attraction) {
+      alert('Please enter a location for local attractions.');
       return;
     }
 
-    const response = await fetch(`https://api.foursquare.com/v3/places/search?query=restaurants&near=${destination}&limit=10`, {
+    // Integrating Foursquare API to fetch local places based on the entered attraction
+    const options = {
+      method: 'GET',
       headers: {
-        Authorization: `Bearer ${foursquareAPIKey}`,
-      },
-    });
+        'accept': 'application/json',
+        'Authorization': `Bearer ${foursquareAPIKey}`,
+      }
+    };
 
+    const response = await fetch(`https://api.foursquare.com/v3/places/search?query=restaurants&near=${attraction}&limit=10`, options);
     if (!response.ok) throw new Error('Failed to fetch local places.');
     const data = await response.json();
     displayLocalPlaces(data.results || []);

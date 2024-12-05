@@ -14,25 +14,35 @@
 
   <div class="container">
     <h1>Diin ta?</h1>
+
     
-    <div>
+    <div class="search-section" id="destination-search">
+      <h2>Search for Destination Images</h2>
       <label for="destination">Ma pa diin ka?</label>
       <input type="text" id="destination" placeholder="e.g. Paris">
-      <button onclick="searchDestination()">Search</button>
+      <button onclick="searchDestination()">Search Images</button>
+      <div id="destination-images"></div>
     </div>
     
-    <div id="destination-images"></div>
-
-    <div>
-      <label for="departure">Diin ka halin?</label>
+    
+    <div class="search-section" id="flight-search">
+      <h2>Search for Flights</h2>
+      <label for="departure">From Where:</label>
       <input type="text" id="departure" placeholder="e.g. New York">
+      <label for="destination-flight">To Where:</label>
+      <input type="text" id="destination-flight" placeholder="e.g. Paris">
       <button onclick="searchFlights()">Search Flights</button>
+      <div id="flights"></div>
     </div>
 
-    <div id="flights"></div>
-
-    <button onclick="searchLocalPlaces()">Mga Estetik nga mga lugar</button>
-    <div id="local-places"></div>
+    
+    <div class="search-section" id="local-places-search">
+      <h2>Search for Local Attractions</h2>
+      <label for="local-attraction">Ma pa diin?</label>
+      <input type="text" id="local-attraction" placeholder="e.g. restaurants near Paris">
+      <button onclick="searchLocalPlaces()">Search Local Attractions</button>
+      <div id="local-places"></div>
+    </div>
 
     <h2>Tahom nga mga lugar</h2>
     <div class="grid-container">
@@ -55,6 +65,18 @@
       <div class="grid-item">
         <img src="https://via.placeholder.com/200x150" alt="Cape Town">
         <h3>Cape Town, South Africa</h3>
+      </div>
+      <div class="grid-item">
+        <img src="https://via.placeholder.com/200x150" alt="Bali">
+        <h3>Bali, Indonesia</h3>
+      </div>
+      <div class="grid-item">
+        <img src="https://via.placeholder.com/200x150" alt="Kuala Lumpur">
+        <h3>Kuala Lumpur, Malaysia</h3>
+      </div>
+      <div class="grid-item">
+        <img src="https://via.placeholder.com/200x150" alt="Palawan">
+        <h3>Palawan, Philippines</h3>
       </div>
     </div>
   </div>
