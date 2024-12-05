@@ -5,55 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Planning</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Style for the sticky title bar */
-    .title-bar {
-      position: sticky;
-      top: 0;
-      background-color: #333;
-      color: white;
-      padding: 10px;
-      text-align: center;
-      z-index: 1000;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      padding: 20px;
-    }
-
-    label, input, button {
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    button {
-      padding: 10px 20px;
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-  </style>
 </head>
 <body>
 
   <div class="title-bar">
-    Travel Planning Website
+    Malagaw ka?
   </div>
 
   <div class="container">
-    <h1>Plan Your Next Adventure</h1>
+    <h1>Diin ta?</h1>
     
     <div>
-      <label for="destination">Enter a Destination:</label>
+      <label for="destination">Ma pa diin ka?</label>
       <input type="text" id="destination" placeholder="e.g. Paris">
       <button onclick="searchDestination()">Search</button>
     </div>
@@ -61,15 +24,39 @@
     <div id="destination-images"></div>
 
     <div>
-      <label for="departure">Departure City:</label>
+      <label for="departure">Diin ka halin?</label>
       <input type="text" id="departure" placeholder="e.g. New York">
       <button onclick="searchFlights()">Search Flights</button>
     </div>
 
     <div id="flights"></div>
 
-    <button onclick="searchLocalPlaces()">Show Local Restaurants & Attractions</button>
+    <button onclick="searchLocalPlaces()">Mga Estetik nga mga lugar</button>
     <div id="local-places"></div>
+
+    <h2>Tahom nga mga lugar</h2>
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="https://via.placeholder.com/200x150" alt="Paris">
+        <h3>Paris, France</h3>
+      </div>
+      <div class="grid-item">
+        <img src="https://via.placeholder.com/200x150" alt="Tokyo">
+        <h3>Tokyo, Japan</h3>
+      </div>
+      <div class="grid-item">
+        <img src="https://via.placeholder.com/200x150" alt="Sydney">
+        <h3>Sydney, Australia</h3>
+      </div>
+      <div class="grid-item">
+        <img src="https://via.placeholder.com/200x150" alt="New York">
+        <h3>New York, USA</h3>
+      </div>
+      <div class="grid-item">
+        <img src="https://via.placeholder.com/200x150" alt="Cape Town">
+        <h3>Cape Town, South Africa</h3>
+      </div>
+    </div>
   </div>
 
   <script src="app.js"></script>
